@@ -127,6 +127,7 @@ public class MoviesRestClientServerFaultTest {
                 .willReturn(ok().withFixedDelay(10000)));
 
         //then
+
         assertThrows(MovieErrorResponse.class, ()->moviesRestClient.retrieveAllMovies());
 
     }
